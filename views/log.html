@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>山东大学学生信息管理系统——登录</title>
+  <link href="/public/img/icon.png" rel="icon">
+  <link href="/public/css/log.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+  <div id="div1">
+    <img id="logimg" src="/public/img/log.png">
+    <div id="div2">
+      <form action="/log" method="post">
+          <div class="form-group">
+            <label for="stuID">学号：</label>
+            <input type="text" name="stuID" class="form-control" id="stuID" placeholder="请输入你的学号">
+          </div>
+          <div class="form-group">
+            <label for="Password">密码：</label>
+            <input type="password" name="password" class="form-control" id="Password" placeholder="请输入你的密码">
+          </div>
+          <div class="btn_div">
+            <button type="submit" class="mybtn">登录</button>
+          </div>
+          <div class="btn_div">
+            <button class="mybtn">修改密码</button>
+          </div>
+        </form>
+    </div>
+  </div>
+</body>
+  <script>
+    if ({{check}}==1){
+      window.alert("学生ID和密码不匹配，请重新输入")
+    }
+  </script>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="/public/css/result.css" type="text/css" rel="stylesheet">
+    <script src="/node_modules/echarts/dist/echarts.min.js"></script>
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+</head>
+<body style="padding-top: 15px">
+    <h2 style="padding-left: 15px">QQ数据库</h2>
+    <div id="rsdiv">
+        <div class="div1"><h3 class="h3">查询结果</h3></div>
+        <div class="div2" id="chart">
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    var chartDom = document.getElementById('chart');
+    var myChart = echarts.init(chartDom);
+    var option;
+
+    myChart.showLoading();
+    $.getJSON('/public/les-miserables.json', function (graph) {
+        myChart.hideLoading();
+
+        option = {
+            tooltip: {},
+            legend: [{
+                data: graph.categories.map(function (a) {
+                    return a.name;
+                })
+            }],
+            series: [
+                {
+                    name: 'Les Miserables',
+                    type: 'graph',
+                    layout: 'none',
+                    data: graph.nodes,
+                    links: graph.links,
+                    categories: graph.categories,
+                    roam: true,
+                    label: {
+                        show: true,
+                        position: 'right',
+                        formatter: '{b}'
+                    },
+                    labelLayout: {
+                        hideOverlap: true
+                    },
+                    scaleLimit: {
+                        min: 0.4,
+                        max: 2
+                    },
+                    lineStyle: {
+                        color: 'source'
+                    }
+                }
+            ]
+        };
+
+        myChart.setOption(option);
+    });
+
+    option && myChart.setOption(option);
+</script>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>edit</title>
+  <link href="/public/css/edit.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div id="main">
+  <div id="leftpanel">
+    <div style="width: 100px;height:100px;margin-right: 90px;margin-left: 90px;margin-top: 15px;margin-bottom: 15px;">
+      <img src="/public/img/userimg.png" class="radiusImg" width="100%" height="auto">
+    </div>
+    <h3 class="info">{{student.name}}</h3>
+    <h5 class="info_Gray">山东大学({{student.campus}}) | 软件工程</h5>
+    <h5 class="info_Gray">{{student.class}}</h5>
+  </div>
+  <div id="rightpanel" class="rightBd">
+    <form action="/student/edit" method="post">
+      <div id="right1">
+        <h3>基本信息</h3>
+        <input type="hidden" name="id" value={{student.id}}>
+        <input type="hidden" name="name" value={{student.name}}>
+        <input type="hidden" name="campus" value={{student.campus}}>
+        <input type="hidden" name="major" value={{student.major}}>
+        <input type="hidden" name="class" value={{student.class}}>
+        <h5><span>性别</span><input name="gender" class="text" type="text" value={{student.gender}}></h5>
+        <h5><span>出生日期</span><input class="text" name="birth" type="text" value={{student.birth}}></h5>
+        <h5><span>Tel</span><input class="text" name="Tel" type="text" value={{student.Tel}}></h5>
+        <h5><span>E-Mail</span><input class="text" name="Email" type="text" value={{student.Email}}></h5>
+        <h5><span>英语</span><input class="text" name="Englishlevel" type="text" value={{student.Englishlevel}}></h5>
+        <hr color="#D9E2DD">
+        <h3>职业技能</h3>
+        <h5><span>Java</span><img src="/public/img/get.png"></h5>
+        <h5><span>CPP</span><img src="/public/img/still.png"></h5>
+        <h5><span>HTML</span><img src="/public/img/get.png"></h5>
+        <h5><span>Css</span><img src="/public/img/get.png"></h5>
+        <h5><span>JavaScript</span><img src="/public/img/still.png"></h5>
+      </div>
+    <div id="right2">
+      <h3>本科教育</h3>
+      <h5><span class="span2">2019-2020学年排名</span><span class="span1">前50%</span><img src="/public/img/get.png"></h5>
+      <h5><span class="span2">2019年末转专业</span><span class="span1">软件工程->AI</span><img src="/public/img/still.png"></h5>
+      <h5><span class="span2">CET</span><span class="span1">level 4</span><img src="/public/img/get.png"></h5>
+      <h5><span class="span2">CET</span><span class="span1">level 6</span><img src="/public/img/still.png"></h5>
+      <h5><span class="span2">CCF</span><span class="span1"></span><img src="/public/img/still.png"></h5>
+      <div style="width: 200px;height:68px;background: white;border-bottom-right-radius: 10px;padding-left: 40px;padding-right: 40px;position: absolute;bottom: 50px">
+        <input class="infobtn" type="submit" value="提 交 信 息">
+      </div>
+    </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>

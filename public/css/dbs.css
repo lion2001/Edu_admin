@@ -1,0 +1,35 @@
+body{
+  background:none;
+}
+
+#tbdiv{
+  margin: 10px;
+  padding-top: 3px;
+  border: 1px gainsboro solid;
+  border-radius: 10px;
+  position: relative;
+}
+
+.div1 ::before{
+  content: "";
+  border: 1px #C4CB13 solid;
+  border-radius: 10px 10px 0 0;
+  background: #C4CB13;
+  height: 9px;
+  width: 100%;
+  top:-4px;
+  left: 0px;
+  position: absolute;
+}
+
+.h2{
+  display: block;
+  position: relative;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.div2{
+  padding-left: 10px;
+  padding-right: 10px;
+}

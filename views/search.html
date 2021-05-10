@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>搜索</title>
+    <link href="../static/img/icon.png" rel="icon">
+    <script src="../static/js/search.js" type="text/javascript"></script>
+    <link href="../static/css/search.css" type="text/css" rel="stylesheet">
+    <link href="../../node_modules/_bootstrap@4.6.0@bootstrap/dist/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <h2 style="padding-left: 10px">数据库查询</h2>
+    <div id="fmdiv">
+        <div class="div1"><h2 class="h2">输入查询条件</h2></div>
+        <div class="div2">
+            <form>
+                <div class="form-group">
+                    <label for="type">通过何种条件查询</label>
+                    <select class="form-control" name="type" id="type">
+                        <option value="QQ">QQ号</option>
+                        <option value="Qun">QQ群号</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="condition">查询条件</label>
+                    <input type="text" class="form-control" id="condition" placeholder="查询条件">
+                </div>
+                <button type="submit" class="mybtn">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

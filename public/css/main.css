@@ -1,0 +1,63 @@
+body{
+	margin: 0;
+	font-family: "Adobe 黑体 Std R","Arial" ;
+}
+
+#color{
+	margin: 0;
+	width: 1382px;
+	height:670px;
+	position: relative;
+	background: url("../img/geren .png") no-repeat;
+	background-size: 100%;
+}
+
+#main{
+	margin: 0;
+	width: 1382px;
+	height:670px;
+	position: relative;
+	/*border: #0000cc;*/
+	border-width: 5px;
+	background: rgba(222,227,227,0.3);
+	background-size: 100%;
+}
+
+.div{
+	position: relative;
+}
+
+.div img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+#b1{
+	width: 50%;
+	height: 50%;
+	/*background: #00cc66;*/
+	float: left;
+}
+
+#b2{
+	width: 50%;
+	height: 50%;
+	/*background: #55AAEE;*/
+	float: left;
+}
+
+#b3{
+	width: 50%;
+	height: 50%;
+	/*background: #9bacc2;*/
+	float: left;
+}
+
+#b4{
+	width: 50%;
+	height: 50%;
+	/*background: #99ffcc;*/
+	float: left;
+}

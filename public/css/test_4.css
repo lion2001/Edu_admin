@@ -1,0 +1,13 @@
+#page{border: 0;margin: 0;padding:0;font-family: sans-serif,"Adobe 黑体 Std R"}
+#app{background: #B7C9EC;height: 763px;width: 1536px}
+#header{background: #3C5890;border: 0;margin: 0;padding: 0;height:10%;width: 100%}
+#headerImg{width: auto;height: 76.3px}
+#leftsection{width: 10%;background: #2E4165;height:90%;float: left;color: white;line-height: 70px;font-weight:bold}
+#rightsection{width: 90%;height: 90%;float: left;padding: 0;margin: 0}
+ul{border-left: 0;background: white;position:relative}
+span{display: block;padding-left: 40px;position: relative}
+.leftIcon{height: 20px;width: auto;position: absolute;top: 22px;left: 15px}
+#headerinfo{width: 300px;height: 76px;float: right;position: relative;}
+#userimg{width: 50px;height: auto;position: absolute;top: 10px}
+button{border: 0;color: white;background:#2E4165;border-radius: 10px;outline: none }
+#div001{position: absolute;top: 20px;left: 65px}
